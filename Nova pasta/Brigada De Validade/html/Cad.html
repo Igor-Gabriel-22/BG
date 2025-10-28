@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="../css/cadastro.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeSidebar()">×</a>
+    <a href="index.html">Início</a>
+    <a href="#">Vacina</a>
+    <a href="#">Sobre</a>
+    <a href="Cadastro.html">Cadastro</a>
+  </div>
+
+  <!-- Conteúdo -->
+  <div class="content">
+    <h1 class="cad">Cadastro</h1>
+  </div>
+
+  <!-- Formulário -->
+  <div class="form-container">
+    <img src="../imagens/logo.jpg" class="Logo" alt="Logo">
+
+    <form action="#" method="post">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" name="senha" required>
+
+      <button type="submit">Cadastrar</button>
+    </form>
+
+  <a class="voltar" href="../html/index.html"><i class="bi bi-arrow-left"></i></a>
+    <div class="login-link">
+      <p>Caso já possua uma conta, <a href="../html/Login.html">clique aqui!</a></p>
+    </div>
+  </div>
+</body>
+</html>

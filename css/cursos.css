@@ -1,0 +1,304 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fcfaf7;
+}
+
+header {
+    background-color: #004587;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.container-titulo {
+    text-align: center;
+    flex: 1;
+}
+
+.titulo {
+    font-size: 45px;
+    color: white;
+    font-weight: 700;
+    margin: 0;
+}
+
+.linha {
+    background-color: orange;
+    height: 5px;
+    width: 180px;
+    border: none;
+    margin: 6px auto 0;
+}
+
+.voltar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: orange;
+    color: white;
+    margin-right: 80px;
+    width: 65px;
+    height: 45px;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+}
+
+.voltar:hover {
+    background-color: white;
+    color: #004587;
+    transform: translateY(-3px);
+}
+
+.bi-arrow-left-short {
+    font-size: 38px;
+    line-height: 1;
+}
+
+main.conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 160px; 
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.texto-lateral {
+    width: 280px;
+    color: #333;
+}
+
+.texto-lateral h2 {
+    color: #004587;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.texto-lateral p {
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.video {
+    width: 460px;
+    height: 250px;
+    border-top: 3px solid orange;
+    border-bottom: 3px solid #004587;
+    border-radius: 8px;
+    animation: borda 2s ease infinite;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+@keyframes borda {
+    0% {
+        border-top: 3px solid orange;
+        border-bottom: 3px solid #004587;
+    }
+    50% {
+        border-top: 3px solid #004587;
+        border-bottom: 3px solid orange;
+    }
+    100% {
+        border-top: 3px solid orange;
+        border-bottom: 3px solid #004587;
+    }
+}
+
+
+.pdf-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.pdf-controles {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.pdf-controles button {
+    background-color: #004587;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pdf-controles button i {
+    font-size: 32px;
+    line-height: 1;
+}
+
+.pdf-controles button:hover {
+    background-color: orange;
+    color: #004587;
+    transform: translateY(-3px);
+}
+
+
+.continuar {
+    background-color: orange;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.3);
+    transition: all 0.3s;
+}
+
+.continuar:hover {
+    background-color: #004587;
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+@media (max-width: 1024px) {
+    .titulo {
+        font-size: 40px;
+    }
+
+    .video {
+        width: 420px;
+        height: 230px;
+    }
+
+    .texto-lateral {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 85px;
+        padding: 0 20px;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    .titulo {
+        font-size: 32px;
+    }
+
+    .linha {
+        width: 130px;
+        height: 4px;
+    }
+
+    .voltar {
+        width: 55px;
+        height: 42px;
+    }
+
+    .bi-arrow-left-short {
+        font-size: 32px;
+    }
+
+    main.conteudo {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 120px;
+    }
+
+    .texto-lateral {
+        width: 90%;
+        text-align: center;
+    }
+
+    .video {
+        width: 90%;
+        height: 230px;
+    }
+
+    .pdf-controles {
+        gap: 15px;
+    }
+
+    .pdf-controles button {
+        width: 45px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 75px;
+        padding: 0 15px;
+    }
+
+    .logo {
+        width: 60px;
+    }
+
+    .titulo {
+        font-size: 25px;
+    }
+
+    .linha {
+        width: 100px;
+        height: 3px;
+    }
+
+    .voltar {
+        width: 45px;
+        height: 36px;
+        margin-right: 30px;
+    }
+
+    .bi-arrow-left-short {
+        font-size: 26px;
+    }
+
+    main.conteudo {
+        margin-top: 110px;
+        gap: 20px;
+    }
+
+    .texto-lateral h2 {
+        font-size: 24px;
+    }
+
+    .texto-lateral p {
+        font-size: 18px;
+    }
+
+    .video {
+        width: 95%;
+        height: 200px;
+    }
+}

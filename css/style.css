@@ -1,0 +1,618 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
+
+body {
+    overflow-x: hidden;
+    background-color: #fcfaf7;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.titulo {
+    width: 100%;
+    background-color: #e4e4e4;
+    color: #004587;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    padding: 12px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+    margin-top: -1px;
+}
+
+.logo {
+    position: absolute;
+    left: 100px;
+    top: 90px;
+    width: 150px;
+    height: auto;
+}
+
+.as {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 25px;
+}
+
+.botoes {
+    min-width: 200px;
+    height: 50px;
+    background-color: #004587;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 6px;
+    transition: 0.3s;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.botoes:hover {
+    background-color: #f9741e;
+    transform: translateY(-3px);
+}
+
+
+
+.banner-container {
+    width: 1520px;
+    height: 370px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 280px;
+    border-top: 3px solid #f9741e;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+}
+
+.banners {
+    width: 1520px;
+    padding: 0 5px;
+    height: 370px;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.banners.active {
+    opacity: 1;
+}
+
+.container-cursos {
+    width: 100%;
+    min-height: 475px;
+    position: absolute;
+    top: 800px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 60px 20px;
+}
+
+.titulo-cursos {
+    font-size: 55px;
+    font-weight: 700;
+    color: #004587;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 4px solid #f9741e;
+    padding-bottom: 10px;
+}
+
+.container-imagem {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.container-imagem div {
+    border-radius: 6px;
+    overflow: hidden;
+    transition: 0.3s;
+    width: 280px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.container-imagem div:hover {
+    transform: translateY(-5px);
+}
+
+.imagem {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.nome-imagens {
+    font-size: 18px;
+    background-color: #2b2b2b;
+    text-align: center;
+    color: white;
+    padding: 12px;
+    font-weight: 600;
+}
+
+div a{
+    text-decoration: none;
+}
+
+footer {
+    width: 100%;
+    height: 180px;
+    background-color: #004587;
+    position: absolute;
+    top: 1380px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.logo-footer {
+    height: 120px;
+}
+
+.copyright {
+    font-size: 16px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.icones {
+    display: flex;
+    gap: 12px;
+}
+
+.bi-instagram,
+.bx-gmail {
+    font-size: 22px;
+    color: #004587;
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+.bx-gmail {
+    font-size: 33px;
+}
+
+.bi-instagram:hover,
+.bx-gmail:hover {
+    background-color: #f9741e;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.btn-login {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #004587;
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    box-shadow: 0px 2px 6px black;
+    color: white;
+    font-size: 25px;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    transition: 200ms;
+    text-decoration: none;
+}
+
+.btn-login:hover {
+    background-color: #f9741e;
+    transform: translateY(-8px);
+}
+
+.btn-areadoaluno {
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    background-color: #004587;
+    border-radius: 10px;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    line-height: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 200ms;
+    box-shadow: 0px 2px 6px black;
+}
+
+.btn-areadoaluno:hover {
+    background-color: #f9741e;
+    transform: translateY(-8px);
+}
+
+
+@media (max-width: 1024px) {
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .titulo {
+        text-align: center;
+        padding: 12px 16px;
+        line-height: 1.2;
+        margin: 0;
+    }
+
+    .logo {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        display: block;
+        margin: 18px auto 0;
+        width: 150px;
+        height: auto;
+    }
+
+    .as {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        display: flex;
+        justify-content: center;
+        gap: 18px;
+        flex-wrap: wrap;
+        margin: 16px auto 0;
+    }
+
+    .botoes {
+        min-width: 180px;
+        height: 48px;
+        font-size: 18px;
+        line-height: 48px;
+    }
+
+    .banner-container {
+        position: relative;
+        left: auto;
+        transform: none;
+        margin: 26px auto 0;
+        width: calc(100% - 60px);
+        max-width: 1200px;
+        height: 340px;
+        top: auto;
+        border-radius: 8px;
+    }
+
+    .banners {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .container-cursos {
+        position: relative;
+        top: auto;
+        margin: 36px auto 0;
+        width: calc(100% - 60px);
+        max-width: 1200px;
+        padding: 44px 20px;
+    }
+
+    .titulo-cursos {
+        font-size: 42px;
+        text-align: left;
+    }
+
+    .container-imagem {
+        justify-content: center;
+        gap: 32px;
+    }
+
+    .container-imagem div {
+        width: 260px;
+    }
+
+    .nome-imagens {
+        font-size: 17px;
+        padding: 10px;
+    }
+
+    .btn-login,
+    .btn-areadoaluno {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        transform: none;
+        display: inline-block;
+        margin: 10px;
+        width: auto;
+    }
+
+    footer {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin: 40px auto 0;
+        width: calc(100% - 60px);
+        max-width: 1200px;
+        padding: 20px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .icones {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .icones a,
+    .icones i {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: white;
+        border-radius: 6px;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        text-decoration: none;
+        transition: transform .2s, background-color .2s;
+    }
+
+    .icones a i,
+    .icones i {
+        font-size: 20px;
+        color: #004587;
+    }
+
+    .icones a:hover,
+    .icones i:hover {
+        background-color: #f9741e;
+    }
+
+    .icones a:hover i,
+    .icones i:hover i {
+        color: #fff;
+    }
+
+    .copyright {
+        font-size: 15px;
+        color: white;
+        margin: 6px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .logo {
+        width: 130px;
+        margin-top: 12px;
+    }
+
+    .titulo {
+        font-size: 18px;
+    }
+
+    .as {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 12px;
+    }
+
+    .botoes {
+        min-width: 150px;
+        font-size: 17px;
+        height: 46px;
+        line-height: 46px;
+    }
+
+    .banner-container {
+        height: 280px;
+        width: calc(100% - 40px);
+    }
+
+    .container-cursos {
+        width: calc(100% - 40px);
+        padding: 32px 16px;
+    }
+
+    .titulo-cursos {
+        font-size: 34px;
+        text-align: center;
+    }
+
+    .container-imagem {
+        gap: 22px;
+    }
+
+    .container-imagem div {
+        width: 220px;
+    }
+
+    .nome-imagens {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .btn-login,
+    .btn-areadoaluno {
+        width: 48%;
+        margin: 8px 1%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    footer {
+        padding: 18px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .icones {
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .titulo {
+        font-size: 15px;
+        padding: 8px 10px;
+        text-align: center;
+    }
+
+    .logo {
+        width: 100px;
+        margin: 8px auto 6px;
+    }
+
+    .as {
+        flex-direction: column;
+        gap: 10px;
+        margin: 8px auto 12px;
+        align-items: center;
+    }
+
+    .botoes {
+        width: 92%;
+        max-width: 360px;
+        font-size: 15px;
+        height: 46px;
+        line-height: 46px;
+    }
+
+    .banner-container {
+        width: calc(100% - 20px);
+        height: 200px;
+        margin: 10px auto;
+        border-radius: 6px;
+    }
+
+    .banners {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .container-cursos {
+        width: calc(100% - 20px);
+        padding: 20px 10px;
+        margin-top: 10px;
+    }
+
+    .titulo-cursos {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 18px;
+    }
+
+    .container-imagem {
+        flex-direction: column;
+        gap: 14px;
+        align-items: center;
+    }
+
+    .container-imagem div {
+        width: 94%;
+    }
+
+    .imagem {
+        height: 150px;
+    }
+
+    .nome-imagens {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .btn-login,
+    .btn-areadoaluno {
+        width: 94%;
+        display: block;
+        margin: 8px auto;
+        font-size: 18px;
+    }
+
+    footer {
+        position: relative;
+        width: 100%;
+        padding: 18px 12px;
+        margin-top: 18px;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo-footer {
+        height: 72px;
+    }
+
+    .copyright {
+        font-size: 13px;
+    }
+
+    .icones a,
+    .icones i {
+        width: 46px;
+        height: 46px;
+    }
+
+    .icones a i,
+    .icones i {
+        font-size: 22px;
+    }
+}
+

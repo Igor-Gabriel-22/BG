@@ -1,0 +1,241 @@
+body{
+    background-color: white;
+}
+header{
+    width: 100%;
+    height: 150px;
+    background-color: #004587;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+header p{
+    color: white;
+    font-size: 50px;
+    font-family: 'Dosis';
+}
+header img{
+    height: 125px;
+    margin-right: 20px;
+}
+main{
+    width: 55%;
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.quiz{
+    padding-top: 6%;
+    padding-bottom: 2%;
+    background-color: #fcfaf7;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px black;
+    margin-bottom: 20px;
+}
+.pergunta{
+    height: 250px;
+    margin-left: 7.5%;
+    width: 85%;
+    border-radius: 10px;
+    background-color: lightskyblue;
+    display: flex;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.822);
+    flex-direction: column;
+    margin-bottom: 30px;
+    transition: 200ms;
+}
+.pergunta:hover{
+    transform: translateY(-3px);
+}
+.pergunta p{
+    font-family: 'Dosis';
+    font-size: 25px;
+    margin-left: 20px;
+}
+.pergunta label{
+    margin-bottom: 8px;
+    font-family: 'Dosis';
+    font-size: 20px;
+    margin-left: 20px;
+    color: #333;
+}
+.pergunta label input{
+    cursor: pointer;
+}
+.enviar{
+    display: block;
+    background-color: #004587;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px black;
+    margin-left: 85%;
+    transition: 200ms;
+    cursor: pointer;
+    margin-top: -10px;
+    
+}
+.enviar:hover{
+    background-color: #f9741e;
+    transform: translateY(-8px);
+}
+.enviar p{
+    font-size: 30px;
+    font-family: 'Exo 2';
+    color: white;
+}
+
+
+@media (max-width: 1200px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    header p {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    header img {
+        height: 90px;
+        margin: 0;
+    }
+
+    main {
+        position: relative;
+        width: 90%;
+        margin: 200px auto 50px auto;
+        top: 0;
+        left: 0;
+        transform: none;
+    }
+
+    .quiz {
+        padding: 40px 20px;
+        box-sizing: border-box;
+    }
+
+    .pergunta {
+        width: 100%;
+        margin: 0 auto 25px auto;
+        height: auto;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .pergunta p {
+        font-size: 22px;
+    }
+
+    .pergunta label {
+        font-size: 18px;
+        display: block;
+        margin: 5px 0;
+    }
+
+    .enviar {
+        display: block;
+        width: 150px;
+        height: 45px;
+        line-height: 45px;
+        margin: 30px auto 0 auto;
+    }
+
+    .enviar p {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    header p {
+        font-size: 30px;
+    }
+
+    header img {
+        height: 75px;
+    }
+
+    main {
+        width: 95%;
+        margin: 180px auto 40px auto;
+    }
+
+    .quiz {
+        padding: 30px 15px;
+    }
+
+    .pergunta {
+        padding: 12px;
+    }
+
+    .pergunta p {
+        font-size: 20px;
+    }
+
+    .pergunta label {
+        font-size: 16px;
+    }
+
+    .enviar {
+        width: 120px;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    .enviar p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header p {
+        font-size: 26px;
+    }
+
+    header img {
+        height: 60px;
+    }
+
+    main {
+        width: 95%;
+        margin: 200px auto 30px auto;
+    }
+
+    .quiz {
+        padding: 20px 10px;
+    }
+
+    .pergunta {
+        padding: 10px;
+    }
+
+    .pergunta p {
+        font-size: 18px;
+    }
+
+    .pergunta label {
+        font-size: 15px;
+    }
+
+    .enviar {
+        width: 100px;
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .enviar p {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,278 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: 'Dosis';
+  background: lightskyblue;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #333;
+  overflow: hidden;
+}
+
+
+/* Conteúdo principal */
+.content {
+  max-width: 1200px;
+  margin: 50px auto 20px;
+  padding: 20px;
+}
+
+h1 {
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 30px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 50px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+/* Formulário */
+.form-container {
+  background: #004687;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.form-container label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+  text-align: left;
+}
+
+.form-container input,
+.form-container select,
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.form-container input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.form-container input[type="number"]::-webkit-outer-spin-button,
+.form-container input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form-container button {
+  background-color: #1f80f0;
+  color: white;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-container button:hover {
+  background-color: #004587;
+}
+
+.form-container button:active {
+  transform: scale(0.98);
+}
+
+/* Logo */
+.Logo {
+  width: 150px;
+  display: block;
+  margin: 0 auto 20px auto;
+  border-radius: 15px;
+}
+
+/* Link para login */
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.login-link p {
+  color: white;
+}
+
+.login-link a {
+  color: #056fd3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media(max-width:768px) {
+  h1 {
+    font-size: 2.2em;
+  }
+
+  .form-container {
+    width: 90%;
+  }
+}
+
+.voltar {
+  width: 250px;
+  height: 50px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #004587;
+  border-radius: 10px;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 200ms;
+  box-shadow: 0px 2px 6px black;
+}
+
+.voltar:hover {
+  background-color: #f9741e;
+  transform: translateY(-8px);
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  box-shadow: 0px 2px 6px black;
+  border-radius: 5px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Celulares grandes (até 768px) */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  h1 {
+    position: static;
+    translate: none;
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+
+  .form-container {
+    margin-top: 10px;
+    width: 95%;
+    padding: 25px;
+  }
+
+  .Logo {
+    width: 120px;
+  }
+
+  .login-link {
+    font-size: 14px;
+  }
+
+  .voltar {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    line-height: 50px;
+  }
+
+  .logo {
+    width: 70px;
+    height: 70px;
+    top: 15px;
+    right: 15px;
+  }
+}
+
+/* Celulares pequenos (até 480px) */
+@media (max-width: 480px) {
+  body {
+    justify-content: flex-start;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin-top: 15px;
+  }
+
+  .form-container {
+    margin-top: 40px;
+    padding: 20px;
+  }
+
+  .form-container label {
+    font-size: 16px;
+  }
+
+  .form-container input {
+    font-size: 14px;
+  }
+
+  .form-container button {
+    height: 45px;
+    font-size: 16px;
+  }
+
+  .Logo {
+    width: 100px;
+  }
+
+  .login-link p {
+    font-size: 13px;
+  }
+
+  .voltar {
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+    line-height: 45px;
+    top: 10px;
+    left: 10px;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+    top: 10px;
+    right: 10px;
+  }
+}

@@ -1,0 +1,442 @@
+/* ========== RESET BÁSICO ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.6;
+  background: #fcfaf7;
+  color: #222;
+}
+
+/* ========== HEADER ========== */
+header {
+  height: 30dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  font-size: 3.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #004aad;
+  padding: 0 2rem;
+}
+
+/* Links abaixo do título */
+.links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px 0 20px;
+  background: #f1f5f9;
+  font-size: 18px;
+}
+
+.links a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #004aad;
+  transition: color 0.3s;
+}
+
+.links a:hover {
+  color: #ff9100;
+}
+
+/* ========== BARRA LATERAL (ASIDE) ========== */
+aside {
+  position: fixed;
+  top: 0;
+  left: -230px;
+  width: 230px;
+  height: 100dvh;
+  background: #ff9100;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+
+aside .logo{
+  width: 160px;
+  height: auto;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  background: #fdfdfa;
+}
+
+aside .logo:hover{
+  transform: scale(1.05);
+  transition: 200ms;
+}
+
+aside .logo img {
+  width: 160px;
+  height: auto;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #fcfaf7;
+}
+
+aside .linksOutrasPages {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+aside .linksOutrasPages a {
+  text-decoration: none;
+  text-align: center;
+  background: #3b2d1f;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+
+aside .linksOutrasPages a:hover {
+  background: #5a4030;
+  transform: scale(1.05);
+}
+
+/* Botão de fechar lateral */
+.menuLateral {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background: #ff9500;
+  color: #003cff;
+  padding: 3px;
+  font-size: 1.5rem;  
+  position: fixed;
+  left: 25px;
+  top: 8rem;
+  transform: rotate(180deg);
+  transition: all transform 0.5s;
+  scale: 2;
+}
+
+/* ANIMAÇÃO SHOW COMPLETA */
+aside.show{
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+main.show{
+  margin-left: 255px;
+  transition: all 0.3s ease;
+}
+
+.menuLateral.show{
+  transform: rotateX(180deg);
+  transition: all 0.3s ease;
+  position: fixed;
+  left: 250px;
+  top: 8rem;
+}
+
+/* ========== MAIN ========== */
+main {
+  margin-left: 0;
+  padding: 30px 40px;
+  flex: 1;
+  transition: all 0.3s ease;
+}
+
+main h2 {
+  font-size: 2.4rem;
+  color: #004aad;
+  margin-bottom: 10px;
+}
+
+main p,
+main li {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+/* Listas */
+main ol,
+main ul {
+  font-size: 1.5rem;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.sec3 img:hover{
+    transform: scale(1.2);
+    transition: 0.2s;
+}
+
+/* Imagens com legenda */
+.Validade,
+.img5-1,
+.img5-2,
+.img5-3,
+.img5-4,
+.img5-5 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.img0202{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.Validade img,
+.img5-1 img,
+.img5-2 img,
+.img5-3 img,
+.img5-4 img,
+.img5-5 img {
+  width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.Validade p,
+.img5-1 p,
+.img5-2 p,
+.img5-3 p,
+.img5-4 p,
+.img5-5 p {
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+}
+
+.sec6 p{
+    background: rgba(100, 100, 100, 0.1);
+    border: none;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.sec1{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.contVideo{
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  align-items: center;
+}
+
+.sec1 video{
+  border-radius: 10px;
+  height: 70dvh;
+}
+
+.contVideo2{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contVideo2 video{
+  border-radius: 10px;
+  height: 60dvh;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background: #004aad;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+}
+
+footer svg {
+  fill: white;
+  transition: transform 0.3s;
+}
+
+footer svg:hover {
+  transform: scale(1.2);
+  fill: #ff9100;
+}
+
+/* =============== MOBILE ================= */
+@media (max-width: 768px){
+  body{
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+  }
+
+  /* Header */
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    background: #222;
+  }
+
+  header img{
+    max-width: 100%;
+    margin-left: 0px;
+  }
+
+  h2{
+    margin: 24px 0;
+  }
+
+  .titulo02{
+    margin-top: 28dvh;
+  }
+
+  /* Aside */
+  aside{
+    width: 200px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 1000dvh;
+    z-index: 10;
+  }
+
+  aside img{
+    margin-left: 0;
+  }
+
+  /* Animação show completa Mobile */
+  aside.show{
+    left: 0;
+    transition: all 0.3s ease;
+  }
+
+  main.show{
+    margin-left: -255px;
+    transition: all 0.3s ease;
+  }
+
+  .menuLateral.show{
+    transform: rotateX(180deg);
+    transition: all 0.3s ease;
+    position: fixed;
+    left: 250px;
+    top: 8rem;
+  }
+
+  /* Main */
+  h1{
+    font-size: 2.3rem;
+  }
+
+  h2{
+    font-size: 2rem;
+  }
+
+  .contVideo{
+    flex-direction: column;
+    padding: 0 10rem;
+  }
+
+  .videoO{
+    width: 350px;
+  }
+
+  video{
+    width: 350px;
+    height: 90dvh;
+  }
+  
+  .contVideo2 video{
+    width: 660px;
+  }
+  .sec1{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contVideo2{
+    flex-direction: column;
+    padding: 0 20px;
+    height: 450px;
+    margin: 20px 0;
+  }
+
+  .contVideo2 video{
+    width: 300px;
+    height: 60dvh;
+    margin: 0 0 60px 0;
+  }
+
+  .Validade,
+  .img5-1,
+  .img5-2,
+  .img5-3,
+  .img5-4,
+  .img5-5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-left: 10px;
+  width: 280px;
+  }
+
+  img{
+    max-width: 350px;
+    border-radius: 1px;
+    margin-left: 10px;
+  }
+
+  .Validade img{
+  width: 300px;
+  margin: 0;
+  }
+
+  footer{
+    width: 100dvw;
+    margin: 0;
+  }
+}
