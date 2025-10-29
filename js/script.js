@@ -1,16 +1,23 @@
 let index = 0;
 const banners = document.querySelectorAll(".banners");
+const prevBtn = document.querySelector(".banner-btn.prev");
+const nextBtn = document.querySelector(".banner-btn.next");
 
-function showBanner() {
-  banners.forEach((banner, i) => {
+function showBanner(i) {
+  banners.forEach((banner, idx) => {
     banner.classList.remove("active");
-    if (i === index) {
-      banner.classList.add("active");
-    }
+    if (idx === i) banner.classList.add("active");
   });
-
-  index = (index + 1) % banners.length; 
 }
 
-showBanner();
-setInterval(showBanner, 5000);
+nextBtn.addEventListener("click", () => {
+  index = (index + 1) % banners.length;
+  showBanner(index);
+});
+
+prevBtn.addEventListener("click", () => {
+  index = (index - 1 + banners.length) % banners.length;
+  showBanner(index);
+});
+
+showBanner(index);

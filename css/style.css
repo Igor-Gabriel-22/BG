@@ -96,6 +96,34 @@ body, .titulo, b, i, marquee{
     opacity: 1;
 }
 
+.banner-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    border: none;
+    color: white;
+    font-size: 28px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 5;
+    transition: background-color 0.3s;
+}
+
+.banner-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.banner-btn.prev {
+    left: 15px;
+}
+
+.banner-btn.next {
+    right: 15px;
+}
+
 .container-cursos {
     width: 100%;
     min-height: 475px;
@@ -540,6 +568,14 @@ footer a{
         height: 200px;
         margin: 10px auto;
         border-radius: 6px;
+    }
+
+    .banners:nth-child(1){
+        content: url("../imagens/1000035907.jpg");
+    }
+
+    .banners:nth-child(2){
+        content: url("../imagens/1000035907.jpg");
     }
 
     .banners {
