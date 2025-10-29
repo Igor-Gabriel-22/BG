@@ -574,10 +574,6 @@ footer a{
         content: url("../imagens/1000035907.jpg");
     }
 
-    .banners:nth-child(2){
-        content: url("../imagens/1000035907.jpg");
-    }
-
     .banners {
         position: absolute;
         width: 100%;
