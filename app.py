@@ -52,7 +52,7 @@ def login():
 
         with get_conn() as conn, conn.cursor(cursor_factory=RealDictCursor) as cur:
                 cur.execute("SELECT id_user, senha FROM usuarios WHERE username = %s", (username,))  
-            user = cur.fetchone()
+                user = cur.fetchone()
 
         if user and user ["senha"] == password:
             session["user_id"] = user["id_user"]
