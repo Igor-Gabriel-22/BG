@@ -82,7 +82,60 @@ def logout():
 
 if __name__ == "__main__":
     app.run(debug=True)
-@app.route('/p')
 
+    
+@app.route('/p')
 def p():
     return render_template('p.html')
+
+@app.route('/index1')
+def index1():
+    return render_template('index1.html')
+
+@app.route('/areaAluno')
+def areaAluno():
+    return render_template('areaAluno.html')
+
+@app.route('/Cad')
+def Cad():
+    return render_template('Cad.html')
+
+@app.route('/certificado')
+def certificado():
+    return render_template('certificado.html')
+
+@app.route('/curso1')
+def curso1():
+    return render_template('curso1.html')
+
+@app.route('/curso2')
+def curso2():
+    return render_template('curso2.html')
+
+@app.route('/curso3')
+def curso3():
+    return render_template('curso3.html')
+
+@app.route('/index')
+def index():
+    return render_template('index.html')
+
+@app.route('/Login')
+def Login():
+    return render_template('Login.html')
+
+@app.route('/na')
+def na():
+    return render_template('na.html')
+
+@app.route('/quizNA')
+def quizNA():
+    return render_template('quizNA.html')
+
+@app.route('/quizNP')
+def quizNP():
+    return render_template('quizNP.html')
+
+@app.route('/quizP')
+def quizP():
+    return render_template('quizP.html')
