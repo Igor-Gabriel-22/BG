@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificado</title>
+
+  <!-- Arquivos diretos dentro de /static -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='certificado.css') }}">
+</head>
+
+<body>
+  <img src="{{ url_for('static', filename='Design sem nome (2).svg') }}" alt="Certificado">
+
+  <p class="cert">
+    {{ username }} participou do curso <strong>Brigada de Validade</strong>, promovido por
+    {{ instituicao or '[Nome da Instituição]' }}, com carga horária total de
+    {{ carga_horaria or '[XX]' }} horas, realizado no período de
+    {{ data_inicio or '[data de início]' }} a {{ data_fim or '[data de término]' }}.
+  </p>
+
+  <section class="msg">
+    <h1 class="aviso-titulo">⚠️ AVISO IMPORTANTE ⚠️</h1>
+
+    <h2>
+      Estamos cientes de que a página atual está aparentemente quebrada ou incorreta 😕.<br>
+      Pedimos sua paciência e compreensão 🙏.<br>
+      Tente um dos métodos abaixo para imprimir corretamente.<br>
+      <strong>📄 Caso haja layout, deixe no modo paisagem.</strong>
+    </h2>
+
+    <article>
+      <p><strong>💻 Computador</strong></p>
+      <p>1️⃣ Pressione <strong>CTRL + P</strong>.</p>
+      <p>2️⃣ Selecione a opção <strong>Paisagem</strong> no layout.</p>
+      <p>3️⃣ Clique em <strong>Imprimir 🖨️</strong>.</p>
+    </article>
+
+    <article class="an">
+      <p><strong>🤖 Android</strong></p>
+      <p>1️⃣ Abra o site no navegador (<em>Chrome</em>, <em>Firefox</em>, <em>Edge</em>…).</p>
+      <p>2️⃣ Toque nos <strong>três pontinhos ⋮</strong> no canto superior direito.</p>
+      <p>3️⃣ Escolha <strong>Compartilhar</strong> ou <strong>Imprimir</strong>.</p>
+      <p>4️⃣ Selecione a impressora e configure as opções 🧾.</p>
+      <p>5️⃣ Toque em <strong>Imprimir 🖨️</strong>.</p>
+    </article>
+
+    <article class="ip">
+      <p><strong>🍎 iPhone / iPad (iOS)</strong></p>
+      <p>1️⃣ Abra o site no <strong>Safari</strong>.</p>
+      <p>2️⃣ Toque no ícone de <strong>compartilhamento</strong> ⬆️.</p>
+      <p>3️⃣ Role e toque em <strong>Imprimir</strong>.</p>
+      <p>4️⃣ Escolha a impressora e configure as opções ⚙️.</p>
+      <p>5️⃣ Toque em <strong>Imprimir 🖨️</strong>.</p>
+    </article>
+
+    <a class="btn-fechar" id="btn">Ok</a>
+  </section>
+
+  <script src="{{ url_for('static', filename='certificado.js') }}"></script>
+</body>
+
+</html>

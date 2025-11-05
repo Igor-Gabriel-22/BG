@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style2.css') }}"
+    />
+    <title>Perecíveis</title>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header id="header">
+      <img src="{{ url_for('static', filename='1000265101.jpg') }}" alt="Imagem de cabeçalho" />
+    </header>
+
+    <div class="links" id="links">
+      <button class="menuLateral" id="menuLateral">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-arrow-return-left"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"
+          />
+        </svg>
+      </button>
+      <a href="#sec1">Introdução</a>
+      <a href="#sec2">O que é?</a>
+      <a href="#sec3">Validade</a>
+    </div>
+    <br />
+
+    <!-- BARRA LATERAL -->
+    <aside id="aside">
+      <button class="logo" onclick="window.location.href='{{ url_for('index') }}'">
+        <img src="{{ url_for('static', filename='imagem.jpg') }}" alt="Logo" />
+      </button>
+      <div class="linksOutrasPages">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('p') }}">Perecíveis</a>
+        <a href="{{ url_for('index1') }}">Não Perecíveis</a>
+        <a href="{{ url_for('na') }}">Não Alimentícios</a>
+      </div>
+    </aside>
+
+    <!-- PRINCIPAL -->
+    <main id="main">
+      <br id="sec1" />
+      <section class="sec1">
+        <h1>Produtos Perecíveis</h1>
+        <br />
+        <p>
+          Perecíveis são todos os tipos de produtos que têm um prazo de validade curto e estragam com facilidade por diversos fatores como temperatura, umidade, manuseio e contato com outros materiais. Isso faz com que o produto seja considerado impróprio para o uso, podendo causar problemas de saúde caso sejam usados após a data de validade.
+        </p>
+      </section>
+
+      <br id="sec2" />
+      <section class="sec2">
+        <h2 class="titulo02">
+          Aqui são alguns exemplos de produtos perecíveis que você deve ter em casa:
+        </h2>
+        <ol>
+          <h3><li>Medicamentos:</li></h3>
+          <p>
+            A maioria dos medicamentos como xaropes e comprimidos têm uma data impressa na embalagem, mas muitas pessoas mantêm remédios vencidos guardados em casa.
+          </p>
+
+          <h3><li>Maquiagem:</li></h3>
+          <p>
+            Bases líquidas, rímel, sombras cremosas e batons podem ser contaminados por bactérias e fungos. O rímel, em especial, tem vida útil mais curta.
+          </p>
+
+          <h3><li>Protetor solar:</li></h3>
+          <p>
+            Os filtros químicos do protetor solar se degradam rapidamente quando expostos ao calor, perdendo eficiência.
+          </p>
+
+          <h3><li>Tintas:</li></h3>
+          <p>
+            Tintas à base de água ou óleo podem se separar ou perder pigmentação. Vernizes podem cristalizar.
+          </p>
+
+          <h3><li>Pilhas ou baterias:</li></h3>
+          <p>
+            Apesar de não “estragarem” como alimentos, possuem validade. Com o tempo, sofrem autodescarga e perdem eficiência mesmo sem uso.
+          </p>
+        </ol>
+      </section>
+
+      <br id="sec3" />
+      <section class="sec3">
+        <h2 class="titulo03">Como identificar que eles estão vencidos?</h2>
+        <article>
+          <p>Os produtos apresentam sinais quando estão fora da validade, como:</p>
+          <ul>
+            <li><b>Cheiro estranho:</b> cosméticos vencidos desenvolvem odor azedo e diferente do comum.</li>
+            <li><b>Eficiência reduzida:</b> pilhas e baterias descarregam mais rápido e mesmo sem uso.</li>
+            <li><b>Mudança física:</b> tintas podem formar uma crosta sólida dentro da lata, indicando que estão vencidas.</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <a href="https://www.instagram.com/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+          <path
+            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0z"
+          />
+        </svg>
+      </a>
+      <span>2025 - 2025 © Brigada de Validade</span>
+    </footer>
+
+    <!-- VLibras -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+
+    <script src="{{ url_for('static', filename='script1.js') }}"></script>
+  </body>
+</html>

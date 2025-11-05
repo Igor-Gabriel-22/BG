@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}" />
+  <title>Não Perecíveis</title>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header id="header">
+    <img src="{{ url_for('static', filename='1000265103.jpg') }}" alt="Banner de produtos não perecíveis">
+  </header>
+
+  <!-- MENU DE ÂNCORAS -->
+  <nav class="links" id="links">
+    <button class="menuLateral" id="menuLateral" aria-label="Fechar menu lateral">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+           class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+              d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"/>
+      </svg>
+    </button>
+    <a href="#sec1">Introdução</a>
+    <a href="#sec2">O que é?</a>
+    <a href="#sec3">Validade</a>
+    <a href="#sec4">Riscos</a>
+    <a href="#sec5">Dicas</a>
+    <a href="#sec6">Curiosidades</a>
+    <a href="#sec7">Conclusão</a>
+  </nav>
+
+  <!-- MENU LATERAL -->
+  <aside id="aside">
+    <a href="{{ url_for('index') }}" class="logo" aria-label="Voltar à página inicial">
+      <img src="{{ url_for('static', filename='imagem.jpg') }}" alt="Logo Brigada de Validade" />
+    </a>
+    <div class="linksOutrasPages">
+      <a href="{{ url_for('index') }}">Home</a>
+      <a href="{{ url_for('p') }}">Perecíveis</a>
+      <a href="{{ url_for('index1') }}">Não Perecíveis</a>
+      <a href="{{ url_for('na') }}">Não Alimentícios</a>
+    </div>
+  </aside>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main id="main">
+    <!-- Introdução -->
+    <section id="sec1">
+      <h1>Produtos Não Perecíveis</h1>
+      <div class="contVideo">
+        <article>
+          <p>
+            Produtos não perecíveis são alimentos e itens que duram mais tempo sem estragar, podendo ser armazenados fora da geladeira. Exemplos incluem arroz, feijão, macarrão e enlatados. Eles garantem praticidade, economia e ajudam na organização do estoque.
+          </p>
+        </article>
+        <article class="videoO">
+          <video src="{{ url_for('static', filename='VID-20250930-WA0061.mp4') }}" controls aria-label="Vídeo explicativo sobre produtos não perecíveis"></video>
+        </article>
+      </div>
+    </section>
+
+    <!-- O que são -->
+    <section id="sec2">
+      <h2>O que são produtos não perecíveis?</h2>
+      <p>São produtos com longa duração, que podem ser armazenados fora da refrigeração sem perder a qualidade.</p>
+      <p><strong>Exemplos:</strong> arroz, feijão, macarrão, açúcar, sal, farinha, óleo e enlatados.</p>
+
+      <h3>Exemplos principais:</h3>
+      <ol>
+        <li>Feijão</li>
+        <li>Macarrão</li>
+        <li>Farinha de trigo</li>
+        <li>Açúcar</li>
+        <li>Produtos de limpeza</li>
+        <li>Óleo de cozinha</li>
+        <li>Sal</li>
+      </ol>
+    </section>
+
+    <!-- Validade -->
+    <section id="sec3">
+      <h2>Onde verificar a validade?</h2>
+      <div class="Validade">
+        <img src="{{ url_for('static', filename='1000258678.jpg') }}" alt="Exemplo de embalagem mostrando data de validade" />
+        <div class="legendaValidade">
+          <ul>
+            <li>Na parte de trás, perto das informações nutricionais;</li>
+            <li>Na lateral da embalagem;</li>
+            <li>Na tampa ou no fundo de latas, garrafas e potes;</li>
+            <li>No rótulo ou lacre de produtos como óleo, farinha e café.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Riscos -->
+    <section id="sec4">
+      <h2>Riscos de usar produtos vencidos</h2>
+      <ul>
+        <li>Alergias, irritações e intoxicações;</li>
+        <li>Perda de eficácia — o produto não limpa, não protege ou não trata;</li>
+        <li>Risco de contaminação por microrganismos.</li>
+      </ul>
+
+      <h3>Dicas da Brigada de Validade</h3>
+      <ul>
+        <li>Risco à saúde: perda de propriedades e risco de intoxicação alimentar.</li>
+        <li>Perda de qualidade: alteração de sabor, cor e textura.</li>
+        <li>Prejuízo financeiro: produtos vencidos geram perdas.</li>
+        <li>Desconfiança do cliente: prejudica a imagem do supermercado.</li>
+      </ul>
+    </section>
+
+    <!-- Boas práticas -->
+    <section id="sec5">
+      <h2>Dicas da Brigada de Validade</h2>
+      <ol>
+        <li>✅ Verifique as datas de validade antes de repor produtos.</li>
+        <li>📦 Use o método PVPS (Primeiro que Vence, Primeiro que Sai).</li>
+        <li>🧾 Registre prazos em planilhas ou cadernos de controle.</li>
+        <li>🔄 Faça inspeções semanais nas prateleiras e estoque.</li>
+        <li>🚫 Retire imediatamente os produtos vencidos.</li>
+        <li>📋 Mantenha o estoque organizado por tipo e validade.</li>
+        <li>👀 Observe sinais de alteração na cor, cheiro ou embalagem.</li>
+        <li>🤝 Informe o responsável ao encontrar produtos próximos do vencimento.</li>
+      </ol>
+    </section>
+
+    <!-- Conclusão -->
+    <section id="sec7">
+      <h2>Conclusão</h2>
+      <p>Os produtos não perecíveis são essenciais pela durabilidade e praticidade. Controlar a validade evita desperdícios e garante segurança e confiança ao consumidor.</p>
+
+      <h3>Exemplos de conservação:</h3>
+      <ul>
+        <li><strong>Feijão:</strong> manter em recipiente fechado, seco e longe de umidade.</li>
+        <li><strong>Macarrão:</strong> guardar em local ventilado e protegido de insetos.</li>
+        <li><strong>Açúcar:</strong> evitar contato com água e cheiros fortes.</li>
+        <li><strong>Sal:</strong> conservar longe da umidade e do fogão.</li>
+        <li><strong>Óleo:</strong> manter na embalagem original, longe do sol.</li>
+        <li><strong>Café:</strong> armazenar bem fechado, longe da luz e umidade.</li>
+      </ul>
+    </section>
+
+    <!-- Curiosidades -->
+    <section id="sec6">
+      <h2>Curiosidades sobre produtos vencidos</h2>
+      <p><strong>Chocolate em pó:</strong> pode endurecer, mas raramente se torna perigoso.</p>
+      <p><strong>Balas e chicletes:</strong> endurecem e perdem sabor, mas não ficam tóxicos.</p>
+      <p><strong>Gelatina em pó:</strong> perde a capacidade de gelificar e pode ter odor estranho.</p>
+      <p><strong>Achocolatado em pó:</strong> empedra e perde nutrientes.</p>
+      <p><strong>Suco em pó:</strong> perde sabor e cor, podendo ficar amargo.</p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram da Brigada de Validade">
+      <i class="bi bi-instagram"></i>
+    </a>
+    <span>© 2025 Brigada de Validade</span>
+  </footer>
+
+  <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>new window.VLibras.Widget("https://vlibras.gov.br/app");</script>
+
+  <!-- JS -->
+  <script src="{{ url_for('static', filename='script1.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS local -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+
+    <title>Não Alimentícios</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <header id="header">
+      <img src="{{ url_for('static', filename='IMG-20251013-WA0056.jpg') }}" alt="Imagem de Cabeçalho">
+    </header>
+
+    <div class="links" id="links">
+      <button class="menuLateral" id="menuLateral">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"/>
+        </svg>
+      </button>
+
+      <a href="#sec1">Introdução</a>
+      <a href="#sec2">O que é?</a>
+      <a href="#sec3">Validade</a>
+      <a href="#sec4">Riscos</a>
+      <a href="#sec5">Cosméticos e Perfumes</a>
+      <a href="#sec6">Curiosidades</a>
+      <a href="#sec7">Conclusão</a>
+    </div>
+
+    <br>
+
+    <!-- BARRA LATERAL -->
+    <aside id="aside">
+      <button class="logo" onclick="window.location.href='{{ url_for('index') }}'">
+        <img src="{{ url_for('static', filename='imagem.jpg') }}" alt="Logo">
+      </button>
+
+      <div class="linksOutrasPages">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('p') }}">Perecíveis</a>
+        <a href="{{ url_for('index1') }}">Não Perecíveis</a>
+        <a href="{{ url_for('na') }}">Não Alimentícios</a>
+      </div>
+    </aside>
+
+    <!-- PRINCIPAL -->
+    <main id="main">
+      <br id="sec1">
+      <h1>Produtos Não Alimentícios e Validade</h1> 
+      <br>
+
+      <section class="sec1">
+        <article class="contVideo2">
+          <p>
+            Você sabia que não são apenas os alimentos que possuem data de validade? 
+            Muitos produtos que usamos no dia a dia também têm um prazo para serem usados com segurança. 
+            Esses são chamados de produtos não alimentícios. Respeitar a validade é importante para garantir a saúde,
+            a higiene e a eficácia de cada item.
+          </p>
+          <video src="{{ url_for('static', filename='VID-20250930-WA0064.mp4') }}" controls></video>
+        </article>
+      </section>
+
+      <br id="sec2">
+      <section class="sec2">
+        <h2 class="titulo02">O que são produtos não alimentícios?</h2>
+        <p>
+          São todos os produtos que não servem para comer ou beber, mas que
+          utilizamos no corpo, na casa ou na saúde. Eles podem estragar, perder
+          o efeito ou até causar riscos quando usados depois do prazo indicado.
+        </p>
+          
+        <ol>
+          <li>Medicamentos</li>
+          <p>Sempre devem estar dentro do prazo.</p>
+          <p>Depois de vencidos podem perder o efeito ou causar reações perigosas.</p>
+
+          <li>Produtos de Higiene Pessoal</li>
+          <p>Shampoos, sabonetes, cremes, desodorantes.</p>
+          <p>Fora da validade, podem causar alergias ou não funcionar direito.</p>
+
+          <li>Cosméticos</li>
+          <p>Maquiagens, perfumes, esmaltes, protetores solares.</p>
+          <p>Podem mudar de cor, cheiro e causar irritações na pele.</p>
+
+          <li>Produtos de Limpeza</li>
+          <p>Água sanitária, detergente, desinfetante, sabão em pó.</p>
+          <p>Perdem o poder de limpeza e desinfecção depois do prazo.</p>
+
+          <li>Materiais de Saúde e Estética</li>
+          <p>Lentes de contato, soluções de limpeza, preservativos, tinturas de cabelo.</p>
+          <p>Fora da validade, não garantem proteção nem segurança.</p>
+        </ol>
+      </section>
+
+      <br id="sec3">
+      <section class="sec3">
+        <h2 class="titulo03">Onde verificar a validade?</h2>
+        <div class="Validade">
+          <img src="{{ url_for('static', filename='1000258678.jpg') }}" alt="Exemplo de validade">
+          <div class="legendaValidade">
+            <p>
+              Na embalagem, próximo ao número do lote. No símbolo de um potinho
+              aberto (exemplo: “12M” = válido por 12 meses depois de aberto).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <br id="sec4">
+      <section class="sec4">
+        <h2 class="titulo04">Riscos de usar produtos vencidos</h2>
+        <ul>
+          <li>Alergias, irritações e até intoxicações.</li>
+          <li>Perda total da eficácia (não limpa, não protege, não trata).</li>
+          <li>Possibilidade de contaminação por microrganismos.</li>
+        </ul>
+        <br>
+        <h2>Dicas da Brigada de Validade</h2>
+        <ul>
+          <li>Sempre leia o rótulo antes de usar.</li>
+          <li>Anote a data de abertura em cosméticos e cremes.</li>
+          <li>Nunca use medicamentos sem conferir a validade.</li>
+          <li>Guarde os produtos em locais adequados (longe do sol, calor e umidade).</li>
+          <li>Descarte corretamente o que estiver vencido.</li>
+        </ul>
+      </section>
+
+      <br id="sec5">
+      <section class="sec5">
+        <h2>Cosméticos e perfumes</h2>
+        <div class="img5-1">
+          <img src="{{ url_for('static', filename='IMG-20251017-WA0089.jpg') }}" alt="Cosméticos">
+          <div class="leg5-1">
+            <p>Guardar em local fresco, fora do banheiro (umidade estraga rápido).</p>
+            <p>Manter na caixa original ou em armários fechados.</p>
+            <p>Evitar agitar ou expor a calor/luz.</p>
+          </div>
+        </div>
+
+        <h2>Produtos de limpeza</h2>
+        <div class="img5-2">
+          <div class="img0202">
+            <img src="{{ url_for('static', filename='IMG-20251017-WA0090.jpg') }}" alt="Produto de limpeza 1">
+            <img src="{{ url_for('static', filename='IMG-20251017-WA0091.jpg') }}" alt="Produto de limpeza 2">
+          </div>
+          <div class="leg5-2">
+            <p>Conservar em local ventilado e separado de alimentos.</p>
+            <p>Manter bem fechados para não evaporar nem perder eficácia.</p>
+            <p>Evitar misturar frascos diferentes (pode gerar reações químicas perigosas).</p>
+          </div>
+        </div>
+
+        <h2>Tintas, colas e solventes</h2>
+        <div class="img5-3">
+          <img src="{{ url_for('static', filename='1000258689.jpg') }}" alt="Tintas e colas">
+          <div class="leg5-3">
+            <p>Guardar em local fresco e escuro.</p>
+            <p>Sempre com a tampa vedada, na posição correta.</p>
+            <p>Não deixar perto de chamas ou calor, pois muitos são inflamáveis.</p>
+          </div>
+        </div>
+
+        <h2>Pilhas, baterias e eletrônicos</h2>
+        <div class="img5-4">
+          <img src="https://live.staticflickr.com/4094/4853794958_3b90a23ebe_c.jpg" alt="Pilhas e baterias">
+          <div class="leg5-4">
+            <p>Armazenar em local seco, sem calor excessivo.</p>
+            <p>Evitar contato entre polos (pode causar descarga ou curto).</p>
+            <p>Nunca guardar próximo a fontes de calor ou dentro de embalagens úmidas.</p>
+          </div>
+        </div>
+
+        <h2>Lubrificantes e óleos</h2>
+        <div class="img5-5">
+          <img src="{{ url_for('static', filename='IMG-20251017-WA0088.jpg') }}" alt="Lubrificantes e óleos">
+          <div class="leg5-5">
+            <p>Manter longe de poeira, umidade e luz solar.</p>
+            <p>Embalagem bem vedada para evitar oxidação.</p>
+            <p>Não reutilizar embalagem antiga para guardar óleo novo.</p>
+          </div>
+        </div>
+      </section>
+
+      <br id="sec6">
+      <section class="sec6">
+        <h2>Curiosidades</h2>
+        <ol>
+          <li><strong>Perfumes –</strong> depois do prazo, podem oxidar e mudar de cheiro.</li>
+          <li><strong>Shampoos e cremes –</strong> podem criar fungos e bactérias invisíveis.</li>
+          <li><strong>Protetor solar –</strong> perde a eficácia e não protege mais contra raios UV.</li>
+          <li><strong>Pilhas e baterias –</strong> vencidas podem vazar e liberar líquidos corrosivos.</li>
+          <li><strong>Tintas de parede –</strong> podem criar fungos e cheiro desagradável.</li>
+          <li><strong>Produtos de limpeza –</strong> vencidos perdem poder de desinfecção.</li>
+          <li><strong>Adesivos e colas –</strong> endurecem e perdem a capacidade de fixar.</li>
+          <li><strong>Cosméticos em pó –</strong> acumulam ácaros e bactérias invisíveis.</li>
+          <li><strong>Esmalte de unha –</strong> engrossa e muda de fórmula.</li>
+          <li><strong>Lubrificantes e óleos –</strong> vencidos perdem aditivos e causam desgaste.</li>
+        </ol>
+        <br>
+        <p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-check-square-fill" viewBox="0 0 16 16">
+            <path
+              d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z"/>
+          </svg>
+          Ou seja, muitos produtos não “estragam” de forma visível como comida,
+          mas passam a ser menos eficazes ou até arriscados.
+        </p>
+      </section>
+
+      <br id="sec7">
+      <section class="sec7">
+        <h2>Conclusão</h2>
+        <p>
+          Cuidar da validade não é apenas uma questão de organização, mas também de segurança e saúde. 
+          Fique atento e faça parte da Brigada de Validade para proteger você e sua família!
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <a href="https://www.instagram.com/brigada.devalidade0013" target="_blank">
+        <i class="bi bi-instagram"></i>
+      </a>
+      <span>2025 - 2025 © Brigada de Validade</span>
+    </footer>
+
+    <!-- VLibras -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+
+    <!-- JS local -->
+    <script src="{{ url_for('static', filename='script1.js') }}"></script>
+  </body>
+</html>
