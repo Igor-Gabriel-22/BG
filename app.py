@@ -12,10 +12,6 @@ app.secret_key = os.environ.get("SECRET_KEY", "segredo-local")
 def get_conn():
     return psycopg2.connect(os.getenv("DATABASE_URL"), sslmode="require")
 
-@app.route("/")
-def index():
-    return render_template("index.html")
-
 @app.route("/areaAluno")
 def area_aluno():
     if "user_id" not in session:
