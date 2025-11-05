@@ -12,13 +12,6 @@ app.secret_key = os.environ.get("SECRET_KEY", "segredo-local")
 def get_conn():
     return psycopg2.connect(os.getenv("DATABASE_URL"), sslmode="require")
 
-@app.route("/areaAluno")
-def area_aluno():
-    if "user_id" not in session:
-        flash("Você precisa fazer login primeiro.", "warning")
-        return redirect(url_for("login"))
-    return render_template("areaAluno.html")
-
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -70,11 +63,6 @@ def login():
 
     return render_template("Login.html")
 
-@app.route("/logout")
-def logout():
-    session.clear()
-    flash("Você saiu da conta.", "info")
-    return redirect(url_for("login"))
 
 if __name__ == "__main__":
     app.run(debug=True)
