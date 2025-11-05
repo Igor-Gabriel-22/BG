@@ -112,7 +112,7 @@ def curso2():
 def curso3():
     return render_template('curso3.html')
 
-@app.route('/index')
+@app.route('/')
 def index():
     return render_template('index.html')
 
