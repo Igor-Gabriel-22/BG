@@ -57,7 +57,7 @@ def login():
             session["user_id"] = user["id_user"]
             session["username"] = username
             flash(f"Bem-vindo, {username}!", "success")
-            return redirect(url_for("area_aluno"))
+            return redirect(url_for("areaAluno"))
         else:
             flash("Usuário ou senha incorretos.", "danger")
 
