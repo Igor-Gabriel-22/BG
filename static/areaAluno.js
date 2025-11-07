@@ -7,5 +7,5 @@ flipBtn.addEventListener("click", () => {
 });
 
 function imprimirCertificado() {
-    window.open("{{url_for('certificado')}}", "_blank");
-}
+    window.location.href = irpara;
+};
