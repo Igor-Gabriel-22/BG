@@ -6,8 +6,6 @@ const botaoContinuar = document.getElementById("btnContinuar");
 const totalSlides = 7; 
 let slideAtual = 1;
 
-const caminhoBase = "{{url_for('static', filename='Cópia de Treinamento em Produtos_page-')}}";
-
 function atualizarSlide() {
     frame.src = `${caminhoBase}${String(slideAtual).padStart(4, '0')}.jpg`;
 

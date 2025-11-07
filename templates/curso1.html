@@ -24,11 +24,13 @@
   <main class="conteudo">
     <div class="texto-lateral">
       <h2>Controle de Qualidade</h2>
-      <p>Entenda os critérios essenciais para garantir que produtos perecíveis cheguem ao consumidor com segurança, mantendo frescor e valor nutricional.</p>
+      <p>Entenda os critérios essenciais para garantir que produtos perecíveis cheguem ao consumidor com segurança,
+        mantendo frescor e valor nutricional.</p>
     </div>
 
     <div class="pdf-container">
-      <img id="slideFrame" src="{{ url_for('static', filename='Cópia de Treinamento em Produtos_page-0001.jpg') }}" class="video" alt="Slide de treinamento">
+      <img id="slideFrame" src="{{ url_for('static', filename='Cópia de Treinamento em Produtos_page-0001.jpg') }}"
+        class="video" alt="Slide de treinamento">
 
       <div class="pdf-controles">
         <button id="voltarSlide"><i class="bi bi-arrow-left-short"></i></button>
@@ -40,10 +42,13 @@
 
     <div class="texto-lateral">
       <h2>Boas Práticas</h2>
-      <p>Descubra as técnicas recomendadas de armazenamento, transporte e manuseio que reduzem perdas e aumentam a vida útil dos perecíveis.</p>
+      <p>Descubra as técnicas recomendadas de armazenamento, transporte e manuseio que reduzem perdas e aumentam a vida
+        útil dos perecíveis.</p>
     </div>
   </main>
-
+  <script>
+    const caminhoBase = "{{ url_for('static', filename='Cópia de Treinamento em Produtos_page-') }}";
+  </script>
   <script src="{{ url_for('static', filename='cursos.js') }}"></script>
 </body>
 
