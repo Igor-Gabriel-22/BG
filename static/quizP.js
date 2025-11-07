@@ -59,7 +59,7 @@ document.querySelector(".enviar").addEventListener("click", function () {
             botao.style.fontSize = "16px";
 
             botao.addEventListener("click", function () {
-                window.location.href = "{{ url_for('templates' filename='areaAluno.html') }}";
+                window.location.href = areaAlunoURL;
             });
 
             caixa.appendChild(texto);
