@@ -1,9 +1,16 @@
-const aside = document.getElementById("aside");
-const menuLateral = document.getElementById("menuLateral");
-const main = document.getElementById("main");
+let index = 0;
+const banners = document.querySelectorAll(".banners");
 
-menuLateral.addEventListener("click", () => {
-  aside.classList.toggle("show");
-  main.classList.toggle("show");
-  menuLateral.classList.toggle("show");
-});
+function showBanner() {
+  banners.forEach((banner, i) => {
+    banner.classList.remove("active");
+    if (i === index) {
+      banner.classList.add("active");
+    }
+  });
+
+  index = (index + 1) % banners.length; 
+}
+
+showBanner();
+setInterval(showBanner, 5000);

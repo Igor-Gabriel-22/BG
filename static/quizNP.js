@@ -62,7 +62,7 @@
             botao.style.fontSize = "16px";
 
             botao.addEventListener("click", function () {
-                window.location.href = "../html/areaAluno.html"; 
+                window.location.href = "{{ url_for('areaAluno') }}"; 
             });
 
             caixa.appendChild(texto);
