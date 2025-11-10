@@ -42,15 +42,15 @@ def cad():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        username = request.form.get("username", "").strip()
+        username = request.form.get("email", "").strip()
         password = request.form.get("password", "").strip()
 
         if not username or not password:
             flash("Preencha todos os campos.", "warning")
-            return render_template("Login.html")
+            return render_template("login.html")
 
         with get_conn() as conn, conn.cursor(cursor_factory=RealDictCursor) as cur:
-            cur.execute("SELECT id_user, senha FROM usuarios WHERE username = %s", (username,))
+            cur.execute("SELECT id_user, senha FROM usuarios WHERE email = %s", (username,))
             user = cur.fetchone()
 
         if user and user["senha"] == password:
@@ -61,7 +61,7 @@ def login():
         else:
             flash("Usuário ou senha incorretos.", "danger")
 
-    return render_template("Login.html")
+    return render_template("login.html")
 
 
 if __name__ == "__main__":
