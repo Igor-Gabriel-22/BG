@@ -12,8 +12,8 @@ app.secret_key = os.environ.get("SECRET_KEY", "segredo-local")
 def get_conn():
     return psycopg2.connect(os.getenv("DATABASE_URL"), sslmode="require")
 
-@app.route("/Cad", methods=["GET", "POST"])
-def Cad():
+@app.route("/cad", methods=["GET", "POST"])
+def cad():
     if request.method == "POST":
         email = request.form.get("email", "").strip()
         username = request.form.get("username", "").strip()
