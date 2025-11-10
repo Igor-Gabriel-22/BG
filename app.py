@@ -30,7 +30,7 @@ def Cad():
                     (username, password, email),
                 )
                 conn.commit()
-            flash("Cadastro realizado com sucesso!", "success")
+            print("Cadastro realizado com sucesso!")
             return redirect(url_for("Login"))
         except psycopg2.errors.UniqueViolation:
             flash("Usuário já existe.", "danger")
