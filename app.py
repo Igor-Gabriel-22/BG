@@ -63,10 +63,6 @@ def Login():
 
     return render_template("Login.html")
 
-
-if __name__ == "__main__":
-    app.run(debug=True)
-
     
 @app.route('/p')
 def p():
@@ -115,3 +111,6 @@ def quizNP():
 @app.route('/quizP')
 def quizP():
     return render_template('quizP.html')
+
+if __name__ == "__main__":
+    app.run(debug=True)
