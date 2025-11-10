@@ -573,7 +573,7 @@ footer a{
     }
 
     .banners:nth-child(1){
-        content: url("../imagens/1000035907.jpg");
+        content: url("{{ url_for('static', filename='1000035907.jpg') }}");
     }
 
     .banners {
