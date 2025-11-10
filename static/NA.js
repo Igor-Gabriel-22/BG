@@ -6,7 +6,6 @@ const botaoContinuar = document.getElementById("btnContinuar");
 const totalSlides = 8; 
 let slideAtual = 1;
 
-const caminhoBase = "../slides/NA/Treinamento em Produtos (1)_page-";
 
 function atualizarSlide() {
     frame.src = `${caminhoBase}${String(slideAtual).padStart(4, '0')}.jpg`;

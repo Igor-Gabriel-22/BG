@@ -24,11 +24,13 @@
   <main class="conteudo">
     <div class="texto-lateral">
       <h2>Controle de Qualidade</h2>
-      <p>Aprenda os critérios fundamentais para assegurar que produtos não alimentícios cheguem ao consumidor em perfeito estado, com segurança e eficiência, mantendo sua funcionalidade e aparência original.</p>
+      <p>Aprenda os critérios fundamentais para assegurar que produtos não alimentícios cheguem ao consumidor em
+        perfeito estado, com segurança e eficiência, mantendo sua funcionalidade e aparência original.</p>
     </div>
 
     <div class="pdf-container">
-      <img id="slideFrame" src="{{ url_for('static', filename='Treinamento em Produtos (1)_page-0001.jpg') }}" class="video" alt="Slide de treinamento">
+      <img id="slideFrame" src="{{ url_for('static', filename='Treinamento em Produtos (1)_page-0001.jpg') }}"
+        class="video" alt="Slide de treinamento">
 
       <div class="pdf-controles">
         <button id="voltarSlide"><i class="bi bi-arrow-left-short"></i></button>
@@ -40,10 +42,13 @@
 
     <div class="texto-lateral">
       <h2>Boas Práticas</h2>
-      <p>Conheça as melhores práticas de armazenamento, transporte e exposição que garantem a conservação, integridade e apresentação dos produtos não alimentícios no ponto de venda.</p>
+      <p>Conheça as melhores práticas de armazenamento, transporte e exposição que garantem a conservação, integridade e
+        apresentação dos produtos não alimentícios no ponto de venda.</p>
     </div>
   </main>
-
+  <script>
+    const caminhoBase = "{{ url_for('static', filename='Treinamento em Produtos (1)_page-') }}";
+  </script>
   <script src="{{ url_for('static', filename='NA.js') }}"></script>
 </body>
 

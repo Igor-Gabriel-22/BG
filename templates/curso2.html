@@ -24,11 +24,13 @@
   <main class="conteudo">
     <div class="texto-lateral">
       <h2>Controle de Qualidade</h2>
-      <p>Aprenda a garantir que os produtos não perecíveis mantenham sua integridade, segurança e qualidade durante todas as etapas de transporte e armazenamento.</p>
+      <p>Aprenda a garantir que os produtos não perecíveis mantenham sua integridade, segurança e qualidade durante
+        todas as etapas de transporte e armazenamento.</p>
     </div>
 
     <div class="pdf-container">
-      <img id="slideFrame" src="{{ url_for('static', filename='Treinamento não perecíveis_page-0001.jpg') }}" class="video" alt="Slide de treinamento - Não Perecíveis">
+      <img id="slideFrame" src="{{ url_for('static', filename='Treinamento não perecíveis_page-0001.jpg') }}"
+        class="video" alt="Slide de treinamento - Não Perecíveis">
 
       <div class="pdf-controles">
         <button id="voltarSlide"><i class="bi bi-arrow-left-short"></i></button>
@@ -40,10 +42,13 @@
 
     <div class="texto-lateral">
       <h2>Boas Práticas</h2>
-      <p>Conheça os cuidados ideais com empilhamento, ventilação e controle de umidade para prolongar a vida útil e preservar a qualidade dos produtos não perecíveis.</p>
+      <p>Conheça os cuidados ideais com empilhamento, ventilação e controle de umidade para prolongar a vida útil e
+        preservar a qualidade dos produtos não perecíveis.</p>
     </div>
   </main>
-
+  <script>
+    const caminhoBase = "{{ url_for('static', filename='Treinamento não perecíveis_page-') }}";
+  </script>
   <script src="{{ url_for('static', filename='NP.js') }}"></script>
 </body>
 
