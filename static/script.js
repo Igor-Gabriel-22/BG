@@ -1,5 +1,7 @@
 let index = 0;
 const banners = document.querySelectorAll(".banners");
+const prevBtn = document.querySelector(".banner-btn.prev");
+const nextBtn = document.querySelector(".banner-btn.next");
 
 function showBanner() {
   banners.forEach((banner, i) => {
@@ -8,9 +10,19 @@ function showBanner() {
       banner.classList.add("active");
     }
   });
-
-  index = (index + 1) % banners.length; 
 }
 
+function nextBanner() {
+  index = (index + 1) % banners.length;
+  showBanner();
+}
+
+function prevBanner() {
+  index = (index - 1 + banners.length) % banners.length;
+  showBanner();
+}
+
+nextBtn.addEventListener("click", nextBanner);
+prevBtn.addEventListener("click", prevBanner);
+
 showBanner();
-setInterval(showBanner, 5000);
