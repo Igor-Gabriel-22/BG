@@ -100,10 +100,6 @@ def curso3():
 def index():
     return render_template('index.html')
 
-@app.route('/Login')
-def Login():
-    return render_template('Login.html')
-
 @app.route('/na')
 def na():
     return render_template('na.html')
