@@ -12,8 +12,8 @@ app.secret_key = os.environ.get("SECRET_KEY", "segredo-local")
 def get_conn():
     return psycopg2.connect(os.getenv("DATABASE_URL"), sslmode="require")
 
-@app.route("/register", methods=["GET", "POST"])
-def register():
+@app.route("/Cad", methods=["GET", "POST"])
+def Cad():
     if request.method == "POST":
         email = request.form.get("email", "").strip()
         username = request.form.get("username", "").strip()
@@ -39,8 +39,8 @@ def register():
 
     return render_template("Cad.html")
 
-@app.route("/login", methods=["GET", "POST"])
-def login():
+@app.route("/Login", methods=["GET", "POST"])
+def Login():
     if request.method == "POST":
         username = request.form.get("username", "").strip()
         password = request.form.get("password", "").strip()
