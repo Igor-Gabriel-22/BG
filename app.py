@@ -39,8 +39,8 @@ def Cad():
 
     return render_template("Cad.html")
 
-@app.route("/Login", methods=["GET", "POST"])
-def Login():
+@app.route("/login", methods=["GET", "POST"])
+def login():
     if request.method == "POST":
         username = request.form.get("username", "").strip()
         password = request.form.get("password", "").strip()
