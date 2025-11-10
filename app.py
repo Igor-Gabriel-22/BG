@@ -26,7 +26,7 @@ def Cad():
         try:
             with get_conn() as conn, conn.cursor() as cur:
                 cur.execute(
-                    "INSERT INTO usuarios (username, senha, email) VALUES (%s, %s, %s)",
+                    "INSERT INTO usuarios (username, senha, email) VALUES (?, ?, ?)",
                     (username, password, email),
                 )
                 conn.commit()
