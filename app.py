@@ -80,10 +80,6 @@ def index1():
 def areaAluno():
     return render_template('areaAluno.html')
 
-@app.route('/Cad')
-def Cad():
-    return render_template('Cad.html')
-
 @app.route('/certificado')
 def certificado():
     return render_template('certificado.html')
