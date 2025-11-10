@@ -12,8 +12,8 @@ app.secret_key = os.environ.get("SECRET_KEY", "segredo-local")
 def get_conn():
     return psycopg2.connect(os.getenv("DATABASE_URL"), sslmode="require")
 
-@app.route("/cad", methods=["GET", "POST"])
-def cad():
+@app.route("/Cad", methods=["GET", "POST"])
+def Cad():
     if request.method == "POST":
         email = request.form.get("email", "").strip()
         username = request.form.get("username", "").strip()
@@ -31,7 +31,7 @@ def cad():
                 )
                 conn.commit()
             flash("Cadastro realizado com sucesso!", "success")
-            return redirect(url_for("login"))
+            return redirect(url_for("Login"))
         except psycopg2.errors.UniqueViolation:
             flash("Usuário já existe.", "danger")
         except Exception as e:
@@ -39,15 +39,15 @@ def cad():
 
     return render_template("Cad.html")
 
-@app.route("/login", methods=["GET", "POST"])
-def login():
+@app.route("/Login", methods=["GET", "POST"])
+def Login():
     if request.method == "POST":
         username = request.form.get("email", "").strip()
         password = request.form.get("password", "").strip()
 
         if not username or not password:
             flash("Preencha todos os campos.", "warning")
-            return render_template("login.html")
+            return render_template("Login.html")
 
         with get_conn() as conn, conn.cursor(cursor_factory=RealDictCursor) as cur:
             cur.execute("SELECT id_user, senha FROM usuarios WHERE email = %s", (username,))
@@ -61,7 +61,7 @@ def login():
         else:
             flash("Usuário ou senha incorretos.", "danger")
 
-    return render_template("login.html")
+    return render_template("Login.html")
 
 
 if __name__ == "__main__":
